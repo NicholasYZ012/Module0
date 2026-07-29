@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/28 18:45:01 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/29 09:12:47 by nilim            ###   ########.fr       */
+/*   Created: 2026/07/29 09:34:58 by nilim             #+#    #+#             */
+/*   Updated: 2026/07/29 10:25:50 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+void    *ft_memcpy(void dest[restrict n], const void src[restrict n], size_t n)
 {
-    if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-        return (1);
-    return (0);
+    size_t  i;
+
+    if (src == dest)
+        return (dest);
+    i = 0;
+    while (i < n)
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    return (src);
 }

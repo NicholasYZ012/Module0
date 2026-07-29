@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/28 18:45:01 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/29 09:12:47 by nilim            ###   ########.fr       */
+/*   Created: 2026/07/29 09:44:37 by nilim             #+#    #+#             */
+/*   Updated: 2026/07/29 10:29:02 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+void    *memmove(void dest[n], const void src[n], size_t n)
 {
-    if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-        return (1);
-    return (0);
+    void    *d;
+    void    *s;
+    
+    if (dest == src)
+        return (dest);
+    d = dest;
+    s = src;
+    if (src > dest)
+    {
+        while (n--)
+        {
+            
+        }
+    }
 }
