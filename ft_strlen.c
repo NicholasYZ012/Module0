@@ -6,16 +6,16 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 09:01:46 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/29 09:32:03 by nilim            ###   ########.fr       */
+/*   Updated: 2026/07/29 23:13:05 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
-    size_t length;
+	size_t	length;
 
-    length = 0;
-    while (s[length])
-        length++;
-    return (length);
+	length = 0;
+	while (s[length])
+		length++;
+	return (length);
 }

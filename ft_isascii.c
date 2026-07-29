@@ -6,13 +6,13 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 08:58:48 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/29 09:12:55 by nilim            ###   ########.fr       */
+/*   Updated: 2026/07/29 23:13:36 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

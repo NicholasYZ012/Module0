@@ -6,13 +6,13 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 09:00:35 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/29 09:12:39 by nilim            ###   ########.fr       */
+/*   Updated: 2026/07/29 23:10:29 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

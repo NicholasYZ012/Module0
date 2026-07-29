@@ -6,18 +6,18 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 09:28:19 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/29 09:34:02 by nilim            ###   ########.fr       */
+/*   Updated: 2026/07/29 18:56:54 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_bzero(void s[n], size_t n)
+void	ft_bzero(void s[n], size_t n)
 {
-    size_t  i;
+	size_t	i;
 
-    i = 0;
-    while (i < n)
-    {
-        s[i] = 0;
-        i++;
-    }
+	i = 0;
+	while (i < n)
+	{
+		s[i] = 0;
+		i++;
+	}
 }

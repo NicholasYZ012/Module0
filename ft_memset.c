@@ -6,19 +6,19 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 09:06:10 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/29 09:26:20 by nilim            ###   ########.fr       */
+/*   Updated: 2026/07/29 23:12:37 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memset(void s[n], int c, size_t n)
+void	*ft_memset(void s[n], int c, size_t n)
 {
-    int  i;
+	int	i;
 
-    i = 0;
-    while (i < n)
-    {
-        s[i] = (unsigned char)c;
-        i++;
-    }
-    return (s);
+	i = 0;
+	while (i < n)
+	{
+		s[i] = (unsigned char)c;
+		i++;
+	}
+	return (s);
 }
