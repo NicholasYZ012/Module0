@@ -6,21 +6,27 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 09:34:58 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/29 23:11:22 by nilim            ###   ########.fr       */
+/*   Updated: 2026/07/30 12:39:37 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void dest[restrict n], const void src[restrict n], size_t n)
-{
-	size_t	i;
+#include <stddef.h>
 
-	if (src == dest)
-		return (dest);
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+{
+	size_t						i;
+	unsigned char	*restrict	d;
+	unsigned char	*restrict	s;
+
+	d = (unsigned char *restrict) dest;
+	s = (unsigned char *restrict) src;
+	if (s == d)
+		return (d);
 	i = 0;
 	while (i < n)
 	{
-		dest[i] = src[i];
+		d[i] = s[i];
 		i++;
 	}
-	return (src);
+	return (dest);
 }
