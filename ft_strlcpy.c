@@ -6,15 +6,15 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 23:58:06 by nilim             #+#    #+#             */
-/*   Updated: 2026/07/30 11:52:54 by nilim            ###   ########.fr       */
+/*   Updated: 2026/07/31 23:01:56 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-static int	ft_strlen(const char *str)
+static size_t	ft_strlen(const char *str)
 {
-	int	c;
+	size_t	c;
 
 	c = 0;
 	while (str[c])
