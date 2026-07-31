@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/29 09:34:58 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/01 00:12:48 by nilim            ###   ########.fr       */
+/*   Created: 2026/08/01 00:12:12 by nilim             #+#    #+#             */
+/*   Updated: 2026/08/01 00:32:18 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_toupper(int c)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
-
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	i = 0;
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (dest);
+	if (ft_isalpha(c) && ft_isalpha(c - 32))
+		return (c - 32);
+	return (c);
 }
