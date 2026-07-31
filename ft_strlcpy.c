@@ -12,7 +12,28 @@
 
 #include <stddef.h>
 
+static int	ft_strlen(const char *str)
+{
+	int	c;
+
+	c = 0;
+	while (str[c])
+		c++;
+	return (c);
+}
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (!dst)
+	size_t	i;
+
+	i = 0;
+	if (!dst || !src || !size)
+		return (0);
+	while (i < size - 1 && src)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }

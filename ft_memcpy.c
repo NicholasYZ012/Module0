@@ -20,8 +20,6 @@ void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 
 	d = (unsigned char *restrict) dest;
 	s = (unsigned char *restrict) src;
-	if (s == d)
-		return (d);
 	i = 0;
 	while (i < n)
 	{

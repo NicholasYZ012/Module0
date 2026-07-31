@@ -38,9 +38,7 @@
     }
   ],
   "markers": {
-    "ft_memmove.c": "in-progress",
-    "ft_strlcpy.c": "in-progress",
-    "ft_memcpy.c": "in-progress"
+    "ft_strlcpy.c": "in-progress"
   },
   "lineHighlightTypes": [
     {

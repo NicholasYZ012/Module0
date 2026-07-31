@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include "libft.h"
+#include <bsd/string.h>
+// cc -Wall -Werror -Wextra test.c -L . -lft -lbsd -o test
 
 int main(){
-	char src[] = "pineapple";
-	char dest[] = "appl";
-	printf("%s", (char *)ft_memcpy(dest, src, 4));
+	char dest[] = "a";
+	char src[] = "";
+	printf("%s, %lu\n", dest, ft_strlcpy(dest, src, 4));
+	printf("%s, %lu\n", dest, strlcpy(dest, src, 4));
 }
