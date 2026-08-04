@@ -1,27 +1,10 @@
-/*
-cc -Wall -Werror -Wextra test.c -L . -lft -lbsd -o test
-*/
-#include "libft.h"
-#include <bsd/string.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "libtests.h"
 
-int main(){
-	// STRLCAT TEST
-	// Truncation means cutting short an object
-	// When returned value(RV) >= passed size: truncation occured to final string
-	// RV represents the supposed length or char count of the concatenated string
-	// RV = passed size means 1 byte is truncated out of the final string for '\0'
-	
-	char dscat[10] = "apple";
-	char sscat[] = "s";
-	char dscatori[10] = "apple";
-	char sscatori[] = "s";
-	printf("##MINE##\nno: %ld\nword: %s\n\n", ft_strlcat(dscat, sscat, 6), dscat);
-	printf("##LIB##\nno: %ld\nword: %s\n\n\n", strlcat(dscatori, sscatori, 6), dscatori);
-
+void touplower_test(void)
+{
 	// TOUPPER AND TOLOWER TEST
 
+	putstr("~~~~TOUPPER/LOWER TEST~~~~");
 	printf("##MINE##\ntoupper: %c => %c\n", 'a', ft_toupper('a'));
 	printf("toupper: %c => %c\n", 'A', ft_toupper('A'));
 	printf("toupper: %c => %c\n", '3', ft_toupper('3'));
