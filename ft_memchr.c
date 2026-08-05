@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/01 15:53:22 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/03 14:18:22 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/05 10:00:12 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*tgt;
-	size_t			i;
+	int				i;
 
 	tgt = (unsigned char *)s;
 	i = 0;

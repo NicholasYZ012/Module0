@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:10:24 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/04 11:35:36 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/05 12:51:18 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t	len;
-	size_t	i;
+	int		len;
+	int		i;
 	char	*dup;
 
 	i = 0;

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/29 09:01:46 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 10:06:55 by nilim            ###   ########.fr       */
+/*   Created: 2026/08/05 12:41:10 by nilim             #+#    #+#             */
+/*   Updated: 2026/08/05 12:50:52 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <unistd.h>
 
-int	ft_strlen(const char *s)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int	length;
+	int	len;
 
-	length = 0;
-	while (s[length])
-		length++;
-	return (length);
+	len = ft_strlen(s);
+	write(fd, s, len);
+	write(fd, "\n", 1);
 }

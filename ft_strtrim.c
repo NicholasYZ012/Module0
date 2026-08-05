@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:53:27 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/04 12:58:11 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/04 16:40:44 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ static unsigned int	ft_trimbegin(const char *s1, const char *set)
 			if (s1[i] == set[j])
 			{
 				i++;
-				break;
+				break ;
 			}
 			j++;
 		}
 		if (set[j] == '\0')
-			break;
+			break ;
 	}
 	return (i);
 }
@@ -51,12 +51,12 @@ static unsigned int	ft_trimend(const char *s1, const char *set)
 			if (s1[end] == set[j])
 			{
 				end--;
-				break;
+				break ;
 			}
 			j++;
 		}
 		if (set[j] == '\0')
-			break;
+			break ;
 	}
 	return (end);
 }
@@ -66,15 +66,19 @@ char	*ft_strtrim(const char *s1, const char *set)
 	unsigned int	begin;
 	unsigned int	end;
 
+	if (*s1 == '\0')
+		return ("");
 	begin = ft_trimbegin(s1, set);
 	end = ft_trimend(s1, set);
-	return (ft_substr(s1, begin, end - begin));
+	if (end - begin + 1 <= 0 || s1[begin] == '\0')
+		return ("");
+	return (ft_substr(s1, begin, end - begin + 1));
 }
 /*
 #include <stdio.h>
 
 int main(){
-	char *s = "abaHello aba Worldbbc";
+	char *s = "";
 	
 	printf("%s\n", ft_strtrim(s, "abc"));
 }

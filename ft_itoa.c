@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/03 14:31:14 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 09:52:42 by nilim            ###   ########.fr       */
+/*   Created: 2026/08/04 17:04:09 by nilim             #+#    #+#             */
+/*   Updated: 2026/08/04 22:32:31 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static int	ft_power(int r, int n)
 {
@@ -29,40 +29,50 @@ static int	ft_power(int r, int n)
 	return (value);
 }
 
-int	ft_atoi(const char *nptr)
+static int	ft_calctens(long n)
 {
-	int	i;
-	int	neg;
-	int	value;
+	int	tens;
 
-	neg = 0;
-	value = 0;
-	i = 0;
-	if (*nptr == '-' || *nptr == '+')
+	tens = 0;
+	while (n > 9)
 	{
-		if (*nptr == '-')
-			neg = 1;
-		nptr++;
+		n /= 10;
+		tens++;
 	}
-	while (ft_isdigit(nptr[i]))
-		i++;
-	while (i > 0)
-	{
-		value += (*nptr - '0') * (ft_power(10, i - 1));
-		i--;
-		nptr++;
-	}
-	if (neg)
-		return (value * -1);
-	return (value);
+	return (tens);
 }
+
+char	*ft_itoa(int n)
+{
+	int		i;
+	int		tens;
+	long	n2;
+	char	*str;
+
+	i = 0;
+	n2 = (long)n;
+	str = malloc(12 * sizeof(char));
+	if (n2 < 0)
+	{
+		str[i] = '-';
+		i++;
+		n2 *= -1;
+	}
+	tens = ft_calctens(n2);
+	while (tens >= 0)
+	{
+		str[i] = '0' + ((n2 / ft_power(10, tens)) % 10);
+		i++;
+		tens--;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
 /*
-#include <stdlib.h>
 #include <stdio.h>
 
 int main(){
-	char *a = "aba900";
-	printf("%d\n", atoi(a));
-	printf("%d\n", ft_atoi(a));
+	printf("%s\n", ft_itoa(10));
 }
-*/
+	*/

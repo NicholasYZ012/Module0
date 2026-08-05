@@ -1,29 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/29 23:58:06 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 10:06:29 by nilim            ###   ########.fr       */
+/*   Created: 2026/08/04 22:33:23 by nilim             #+#    #+#             */
+/*   Updated: 2026/08/05 12:51:59 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
-	if (!dst || !src || !size)
-		return (0);
-	while (i < size - 1 && src)
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
+	while (s[i])
 	{
-		dst[i] = src[i];
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+	str[i] = '\0';
+	return (str);
 }
+/*
+static char	upper(unsigned int n, char c)
+{
+	return (c - 32);
+}
+
+#include <stdio.h>
+int main(){
+	char *s1 = "apple";
+	char *s2 = ft_strmapi(s1, upper);
+	printf("%s\n", s2);
+	free(s2);
+}
+	*/

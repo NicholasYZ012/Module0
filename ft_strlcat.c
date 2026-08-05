@@ -6,15 +6,15 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/31 21:06:44 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/04 11:28:45 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/05 12:51:35 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strnlen(const char *str, size_t n)
+static int	ft_strnlen(const char *str, size_t n)
 {
-	size_t	c;
+	int	c;
 
 	c = 0;
 	while (str[c] && c < n)
@@ -24,8 +24,8 @@ static size_t	ft_strnlen(const char *str, size_t n)
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	n;
-	size_t	dsize;
+	int		n;
+	int		dsize;
 	size_t	orilength;
 
 	n = 0;
