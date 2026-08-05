@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/31 21:06:44 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 12:51:35 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/05 13:35:54 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_strnlen(const char *str, size_t n)
 {
-	int	c;
+	size_t	c;
 
 	c = 0;
 	while (str[c] && c < n)
@@ -24,8 +24,8 @@ static int	ft_strnlen(const char *str, size_t n)
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int		n;
-	int		dsize;
+	size_t	n;
+	size_t	dsize;
 	size_t	orilength;
 
 	n = 0;
