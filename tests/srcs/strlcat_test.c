@@ -15,6 +15,10 @@ void strlcat_test(const char *s1, const char *s2, size_t dstsize, size_t catsize
 	char *libdst = strcpy(malloc(dstsize * sizeof(char)), s1);
 	
 	putstr("~~~~STRLCAT TEST~~~~");
-	printf("##MINE##\nno: %ld\nword: %s\n\n", ft_strlcat(dst, src, catsize), dst);
-	printf("##LIB##\nno: %ld\nword: %s\n\n\n", strlcat(libdst, libsrc, catsize), libdst);
+	printf("##MINE##\nRV: %ld\nword: %s\n\n", ft_strlcat(dst, src, catsize), dst);
+	printf("##LIB##\nRV: %ld\nword: %s\n\n\n", strlcat(libdst, libsrc, catsize), libdst);
+	free(dst);
+	free(src);
+	free(libdst);
+	free(libsrc);
 }

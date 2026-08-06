@@ -1,27 +1,33 @@
 NAME := test
 
+# Locations
+SRCDIR := ./srcs
+
 # Source and objects
-SRCS :=	putstr.c strlcat_test.c touplower_test.c strchrs_test.c strncmp_test.c memcmp_test.c\
-		strnstr_test.c
+SRCS :=	$(wildcard srcs/*.c)
 OBJ := $(SRCS:%.c=%.o)
 TESTSRC := test.c
 LIB := libtests.a
 
 # Compiler var
 CC := cc
-CFLAGS := -Wall -Wextra -Werror
+CFLAGS := -Wall -Wextra -Werror -I.
+CDEBUG := -fsanitize=address -g
 LDFLAGS := -L.. -L. -ltests -lft -lbsd
 
-all: $(NAME)
+all: $(NAME) clean
 
-$(NAME): $(LIB) alt
+$(NAME): $(LIB)
+	$(CC) $(CDEBUG) $(CFLAGS) $(TESTSRC) -o $@ $(LDFLAGS)
+
+nodebug: $(LIB) clean
 	$(CC) $(CFLAGS) $(TESTSRC) -o $@ $(LDFLAGS)
 
 $(LIB): $(OBJ)
 	ar rcs $@ $^
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) $^ -o $@
+	$(CC) -c $(CDEBUG) $(CFLAGS) $^ -o $@
 
 clean:
 	rm -f $(OBJ)
@@ -34,10 +40,8 @@ re: fclean all
 alt:
 	$(MAKE) all clean -C ../
 
-sclean: clean
+libclean:
 	rm ../libft.a $(LIB)
 
-auto: all sclean
-
-.PHONY: all clean fclean re alt
+.PHONY: all clean fclean re alt auto
 .SILENT:

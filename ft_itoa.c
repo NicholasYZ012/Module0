@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 17:04:09 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/04 22:32:31 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/05 21:38:58 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,3 @@ char	*ft_itoa(int n)
 	str[i] = '\0';
 	return (str);
 }
-
-/*
-#include <stdio.h>
-
-int main(){
-	printf("%s\n", ft_itoa(10));
-}
-	*/

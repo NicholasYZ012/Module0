@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 23:58:06 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 10:06:29 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/06 10:47:17 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	if (!dst || !src || !size)
-		return (0);
+		return (ft_strlen(src));
 	while (i < size - 1 && src)
 	{
 		dst[i] = src[i];

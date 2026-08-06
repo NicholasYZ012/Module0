@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 14:31:14 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 09:52:42 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/06 11:10:03 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,3 @@ int	ft_atoi(const char *nptr)
 		return (value * -1);
 	return (value);
 }
-/*
-#include <stdlib.h>
-#include <stdio.h>
-
-int main(){
-	char *a = "aba900";
-	printf("%d\n", atoi(a));
-	printf("%d\n", ft_atoi(a));
-}
-*/
