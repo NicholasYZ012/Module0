@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:53:27 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/04 16:40:44 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/06 16:03:56 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 {
 	unsigned int	begin;
 	unsigned int	end;
+	char			*trimmed;
 
 	if (*s1 == '\0')
 		return ("");
@@ -72,14 +73,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	end = ft_trimend(s1, set);
 	if (end - begin + 1 <= 0 || s1[begin] == '\0')
 		return ("");
-	return (ft_substr(s1, begin, end - begin + 1));
+	trimmed = ft_substr(s1, begin, end - begin + 1);
+	trimmed[end - begin + 1] = '\0';
+	return (trimmed);
 }
-/*
-#include <stdio.h>
-
-int main(){
-	char *s = "";
-	
-	printf("%s\n", ft_strtrim(s, "abc"));
-}
-*/

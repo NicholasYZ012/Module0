@@ -1,12 +1,12 @@
-/*
-cc -Wall -Werror -Wextra test.c -L . -lft -lbsd -o test
-*/
 #include "libtests.h"
 
 int main(){
 
-	// Part 1
-	// memset_test("iliketoreadcode", '[', 5);
+	putstr("@@@@@@@@@@@@@@");
+	putstr("@@@ PART 1 @@@");
+	putstr("@@@@@@@@@@@@@@\n");
+
+	// memset_test("iliketoreadcode", -3, 5);
 	// bzero_test("iliketoreadcode", 10);
 	// memcpymove_test("PINEAPPLE", "pineapple", 4);
 	// strlcpy_test("pop", "abc", 2);
@@ -20,6 +20,13 @@ int main(){
 	// atoi_test("(ain0awds");
 	// calloc_test(9, sizeof(int));
 
-	// Part 2
+	putstr("@@@@@@@@@@@@@@");
+	putstr("@@@ PART 2 @@@");
+	putstr("@@@@@@@@@@@@@@\n");
+
+	// substr_test("animalballs", 1, 20);
+	// strjoin_test(" ", " ");
+	// strtrim_test("abcHelloabcWorldabc ", "abc");
+	// split_test("tttnicetdone__trapt  huge ", 't');
 	// itoa_test(-109989876);
 }

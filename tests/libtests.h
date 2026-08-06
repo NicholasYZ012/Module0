@@ -23,6 +23,10 @@ void atoi_test(char *str);
 void calloc_test(size_t n, size_t size);
 
 // Part 2
+void substr_test(const char *s, unsigned int start, size_t len);
+void strjoin_test(const char *s1, const char *s2);
+void strtrim_test(const char *s1, const char *set);
+void split_test(const char *s1, char c);
 void itoa_test(int n);
 
 #endif
