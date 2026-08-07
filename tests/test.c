@@ -1,5 +1,19 @@
 #include "libtests.h"
 
+void *proc(void *s1)
+{
+	int i = 0;
+	char *s = (char *)s1;
+	char *load = malloc((ft_strlen(s) + 1) * sizeof(char));
+
+	while(s[i])
+	{
+		load[i] = s[i] + 3;
+	}
+	load[i] = '\0';
+	return (load);
+}
+
 int main(){
 
 	putstr("@@@@@@@@@@@@@@");
@@ -27,7 +41,7 @@ int main(){
 	// substr_test("animalballs", 1, 20);
 	// strjoin_test(" ", " ");
 	// strtrim_test("abcHelloabcWorldabc ", "abc");
-	split_test("", 'c');
+	// split_test("", 'c');
 	// itoa_test(-109989876);
 	// strmapiteri_test("appleBOY123");
 	// fd_test(NULL, 2);
@@ -36,15 +50,24 @@ int main(){
 	putstr("@@@ PART 3 @@@");
 	putstr("@@@@@@@@@@@@@@\n");
 
-	// char **ayat = ft_split("Hi I'm Nicholas", ' ');
-	// t_list *new;
-	// t_list **list = NULL;
+	char **ayat = ft_split("Hi Im Nicholas", ' ');
+	t_list **list = malloc(sizeof(t_list *));
 
-	// for (int i = 0; ayat[i]; i++)
-	// {
-	// 	new = ft_lstnew(ayat[i]);
-	// 	ft_lstadd_back(list, new);
-	// }
-	// ft_lstiter(*list, putstr);
-	// ft_lstclear(list, free);
+	*list = NULL;
+	for (int i = 0; ayat[i]; i++)
+	{
+		ft_lstadd_back(list, ft_lstnew(ft_strdup(ayat[i])));
+		ft_lstadd_front(list, ft_lstnew(ft_strdup(ayat[i])));
+	}
+	printf("List size: %d\n", ft_lstsize(*list));
+	ft_lstiter(*list, putstr);
+
+	t_list *map = ft_lstmap(*list, proc, free);
+	ft_lstiter(map, putstr);
+	ft_lstclear(list, free);
+	ft_lstclear(&map, free);
+	free(list);
+	for (int i = 0; ayat[i]; i++)
+		free(ayat[i]);
+	free(ayat);
 }

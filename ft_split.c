@@ -6,13 +6,12 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:27:28 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/07 14:34:01 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/07 15:25:09 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 static char	**ft_insert(char **arr, char *tgt, char c, int count)
 {
@@ -87,7 +86,6 @@ char	**ft_split(const char *s1, char c)
 	if (clean == NULL)
 		return (NULL);
 	w = ft_wordcounter(clean, c);
-	printf("w: %d\n", w);
 	arr = malloc((w + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);

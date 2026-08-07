@@ -37,9 +37,7 @@
       "label": "Question"
     }
   ],
-  "markers": {
-    "ft_strlcpy.c": "in-progress"
-  },
+  "markers": {},
   "lineHighlightTypes": [
     {
       "id": "highlight-yellow",
