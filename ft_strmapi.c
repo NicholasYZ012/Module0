@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 22:33:23 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 12:51:59 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/07 10:52:54 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,3 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-/*
-static char	upper(unsigned int n, char c)
-{
-	return (c - 32);
-}
-
-#include <stdio.h>
-int main(){
-	char *s1 = "apple";
-	char *s2 = ft_strmapi(s1, upper);
-	printf("%s\n", s2);
-	free(s2);
-}
-	*/

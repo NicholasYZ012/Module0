@@ -5,9 +5,10 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 // Part 1
-void putstr(const char *str);
+void putstr(void *str);
 void memset_test(void *s, int c, size_t n);
 void bzero_test(void *s, size_t n);
 void memcpymove_test(void *dest, const void *src, size_t n);
@@ -28,5 +29,10 @@ void strjoin_test(const char *s1, const char *s2);
 void strtrim_test(const char *s1, const char *set);
 void split_test(const char *s1, char c);
 void itoa_test(int n);
+void strmapiteri_test(char *s1);
+void fd_test(char *s, int fd);
+
+// Part 3
+
 
 #endif

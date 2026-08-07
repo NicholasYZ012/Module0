@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 10:12:59 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 13:36:58 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/07 11:21:51 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-		f(i, &(s[i]));
+		f(i, s + i);
 		i++;
 	}
 }

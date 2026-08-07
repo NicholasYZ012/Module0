@@ -1,6 +1,6 @@
 #include "libtests.h"
 
-void putstr(const char *str)
+void putstr(void *str)
 {
-	printf("%s\n", str);
+	printf("%s\n", (char *)str);
 }

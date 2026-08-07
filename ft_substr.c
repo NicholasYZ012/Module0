@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:16:56 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/06 15:29:56 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/07 11:59:23 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = start;
-	if (len < 0)
-		return (NULL);
 	substr = malloc((len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
@@ -35,7 +33,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	while (i < len)
 	{
 		substr[i] = '\0';
-		i++;	
+		i++;
 	}
 	return (substr);
 }

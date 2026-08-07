@@ -27,6 +27,24 @@ int main(){
 	// substr_test("animalballs", 1, 20);
 	// strjoin_test(" ", " ");
 	// strtrim_test("abcHelloabcWorldabc ", "abc");
-	// split_test("tttnicetdone__trapt  huge ", 't');
+	split_test("     a     ", ' ');
 	// itoa_test(-109989876);
+	// strmapiteri_test("appleBOY123");
+	// fd_test(NULL, 2);
+
+	putstr("@@@@@@@@@@@@@@");
+	putstr("@@@ PART 3 @@@");
+	putstr("@@@@@@@@@@@@@@\n");
+
+	// char **ayat = ft_split("Hi I'm Nicholas", ' ');
+	// t_list *new;
+	// t_list **list = NULL;
+
+	// for (int i = 0; ayat[i]; i++)
+	// {
+	// 	new = ft_lstnew(ayat[i]);
+	// 	ft_lstadd_back(list, new);
+	// }
+	// ft_lstiter(*list, putstr);
+	// ft_lstclear(list, free);
 }

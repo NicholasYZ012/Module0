@@ -8,6 +8,7 @@ void split_test(const char *s1, char c)
 	putstr("Split words");
 	for (int i = 0; arr[i]; i++)
 		printf("word %d: %s\n", i + 1, arr[i]);
+	putstr("\n");
 	free(*arr);
 	free(arr);
 }
