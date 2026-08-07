@@ -27,7 +27,7 @@ int main(){
 	// substr_test("animalballs", 1, 20);
 	// strjoin_test(" ", " ");
 	// strtrim_test("abcHelloabcWorldabc ", "abc");
-	split_test("     a     ", ' ');
+	split_test("", 'c');
 	// itoa_test(-109989876);
 	// strmapiteri_test("appleBOY123");
 	// fd_test(NULL, 2);

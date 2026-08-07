@@ -9,6 +9,7 @@ void split_test(const char *s1, char c)
 	for (int i = 0; arr[i]; i++)
 		printf("word %d: %s\n", i + 1, arr[i]);
 	putstr("\n");
-	free(*arr);
+	for (int i = 0; arr[i]; i++)
+		free(arr[i]);
 	free(arr);
 }
