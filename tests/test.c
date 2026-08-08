@@ -9,6 +9,7 @@ void *proc(void *s1)
 	while(s[i])
 	{
 		load[i] = s[i] + 3;
+		i++;
 	}
 	load[i] = '\0';
 	return (load);
@@ -50,23 +51,24 @@ int main(){
 	putstr("@@@ PART 3 @@@");
 	putstr("@@@@@@@@@@@@@@\n");
 
-	char **ayat = ft_split("Hi Im Nicholas", ' ');
-	t_list **list = malloc(sizeof(t_list *));
+	char **ayat = ft_split("abc", ' ');
 
-	*list = NULL;
+	t_list *list = NULL;
 	for (int i = 0; ayat[i]; i++)
 	{
-		ft_lstadd_back(list, ft_lstnew(ft_strdup(ayat[i])));
-		ft_lstadd_front(list, ft_lstnew(ft_strdup(ayat[i])));
+		ft_lstadd_back(&list, ft_lstnew(ft_strdup(ayat[i])));
+		ft_lstadd_front(&list, ft_lstnew(ft_strdup(ayat[i])));
 	}
-	printf("List size: %d\n", ft_lstsize(*list));
-	ft_lstiter(*list, putstr);
+	printf("List size: %d\n", ft_lstsize(list));
+	putstr("### LSTITER TEST ###");
+	ft_lstiter(list, putstr);
 
-	t_list *map = ft_lstmap(*list, proc, free);
+	putstr("### LSTMAP TEST ###");
+	t_list *map = ft_lstmap(list, proc, free);
 	ft_lstiter(map, putstr);
-	ft_lstclear(list, free);
+	
+	ft_lstclear(&list, free);
 	ft_lstclear(&map, free);
-	free(list);
 	for (int i = 0; ayat[i]; i++)
 		free(ayat[i]);
 	free(ayat);

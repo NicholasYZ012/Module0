@@ -37,11 +37,11 @@ fclean: clean
 
 re: fclean all
 
-alt:
+lib:
 	$(MAKE) all clean -C ../
 
 libclean:
 	rm ../libft.a $(LIB)
 
-.PHONY: all clean fclean re alt auto
+.PHONY: all clean fclean re lib
 .SILENT:
