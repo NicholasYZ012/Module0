@@ -21,25 +21,25 @@ int main(){
 	putstr("@@@ PART 1 @@@");
 	putstr("@@@@@@@@@@@@@@\n");
 
-	// memset_test("iliketoreadcode", -3, 5);
-	// bzero_test("iliketoreadcode", 10);
-	// memcpymove_test("PINEAPPLE", "pineapple", 4);
-	// strlcpy_test("pop", "abc", 2);
-	// strlcat_test("apple", "pine", 10, 7);
+	// memset_test("", 'p', 4);
+	// bzero_test("apple", 7);
+	// memcpymove_test("PINEAPPLE", "pineapple", 2);
+	// strlcpy_test("b", "a", 0);
+	// strlcat_test("xyzbar", "abc", 10, 9);
 	// touplower_test();
-	// strchrs_test("elephant", '\0');
-	// memchr_test("applepineapple", 'n', 10);
-	// strncmp_test("apple", "appl", 5);
-	// memcmp_test("ling", "l", 1);
-	// strnstr_test("applepineapple", "eapp", 8);
-	// atoi_test("(ain0awds");
-	// calloc_test(9, sizeof(int));
+	// strchrs_test("elephante", 'e');
+	// memchr_test("applepineapple", 'n', 3);
+	// strncmp_test("apple", "apples", 6);
+	// memcmp_test("ling", "l", 2);
+	// strnstr_test("applepineapple", "ple", 20);
+	// atoi_test("");
+	// calloc_test(0, sizeof(int));
 
 	putstr("@@@@@@@@@@@@@@");
 	putstr("@@@ PART 2 @@@");
 	putstr("@@@@@@@@@@@@@@\n");
 
-	// substr_test("animalballs", 1, 20);
+	// substr_test("animalballs", 6, 4);
 	// strjoin_test(" ", " ");
 	// strtrim_test("abcHelloabcWorldabc ", "abc");
 	// split_test("", 'c');
@@ -51,25 +51,25 @@ int main(){
 	putstr("@@@ PART 3 @@@");
 	putstr("@@@@@@@@@@@@@@\n");
 
-	char **ayat = ft_split("abc", ' ');
+	// char **ayat = ft_split("abc", ' ');
 
-	t_list *list = NULL;
-	for (int i = 0; ayat[i]; i++)
-	{
-		ft_lstadd_back(&list, ft_lstnew(ft_strdup(ayat[i])));
-		ft_lstadd_front(&list, ft_lstnew(ft_strdup(ayat[i])));
-	}
-	printf("List size: %d\n", ft_lstsize(list));
-	putstr("### LSTITER TEST ###");
-	ft_lstiter(list, putstr);
+	// t_list *list = NULL;
+	// for (int i = 0; ayat[i]; i++)
+	// {
+	// 	ft_lstadd_back(&list, ft_lstnew(ft_strdup(ayat[i])));
+	// 	ft_lstadd_front(&list, ft_lstnew(ft_strdup(ayat[i])));
+	// }
+	// printf("List size: %d\n", ft_lstsize(list));
+	// putstr("### LSTITER TEST ###");
+	// ft_lstiter(list, putstr);
 
-	putstr("### LSTMAP TEST ###");
-	t_list *map = ft_lstmap(list, proc, free);
-	ft_lstiter(map, putstr);
+	// putstr("### LSTMAP TEST ###");
+	// t_list *map = ft_lstmap(list, proc, free);
+	// ft_lstiter(map, putstr);
 	
-	ft_lstclear(&list, free);
-	ft_lstclear(&map, free);
-	for (int i = 0; ayat[i]; i++)
-		free(ayat[i]);
-	free(ayat);
+	// ft_lstclear(&list, free);
+	// ft_lstclear(&map, free);
+	// for (int i = 0; ayat[i]; i++)
+	// 	free(ayat[i]);
+	// free(ayat);
 }

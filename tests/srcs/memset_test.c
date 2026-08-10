@@ -6,11 +6,26 @@ void memset_test(void *s, int c, size_t n){
 
 	s1 = ft_strdup((char *)s);
 	s2 = ft_strdup((char *)s);
+	ft_memset(s1, c, n);
+	memset(s2, c, n);
 	putstr("~~~~MEMSET TEST~~~~");
+	putstr("If empty string is passed, memset gives a buffer overflow error");
 	putstr("This test also uses ft_strdup so it can be considered its test");
 	printf("ori: %s\n", (char *)s);
-	printf("### AFTER MEMSET ###\nMine: %s\n", (char *)ft_memset(s1, c, n));
-	printf("Lib: %s\n\n\n", (char *)memset(s2, c, n));
+	printf("### AFTER MEMSET ###\nMine\n");
+	for (int i = 0; i < ft_strlen(s) + 1; i++)
+		printf("%c ", s1[i]);
+	putstr("");
+	for (int i = 0; i < ft_strlen(s) + 1; i++)
+		printf("%d ", s1[i]);
+	putstr("");
+	printf("Lib\n");
+	for (int i = 0; i < ft_strlen(s) + 1; i++)
+		printf("%c ", s2[i]);
+	putstr("");
+	for (int i = 0; i < ft_strlen(s) + 1; i++)
+		printf("%d ", s2[i]);
+	putstr("\n\n");
 	free(s1);
 	free(s2);
 }

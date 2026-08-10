@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/31 21:06:44 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 13:35:54 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/09 14:39:40 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	n = 0;
 	dsize = ft_strlen(dst);
 	orilength = ft_strnlen(dst, size) + ft_strlen(src);
+	if (!dst || !src || !size)
+		return (orilength);
 	while (n < dsize)
 		n++;
 	while (n < size - 1)

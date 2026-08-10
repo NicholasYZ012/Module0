@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 11:16:56 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/07 11:59:23 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/08 20:30:16 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		substr[i] = '\0';
 		i++;
 	}
+	substr[i] = '\0';
 	return (substr);
 }

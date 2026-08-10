@@ -16,6 +16,7 @@ CDEBUG := -fsanitize=address -g
 LDFLAGS := -L.. -L. -ltests -lft -lbsd
 
 all: $(NAME) clean
+	./test
 
 $(NAME): $(LIB)
 	$(CC) $(CDEBUG) $(CFLAGS) $(TESTSRC) -o $@ $(LDFLAGS)

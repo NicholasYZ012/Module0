@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/29 09:44:37 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/06 10:22:06 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/08 19:52:54 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (dest);
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	if (src < dest)
+	if (src > dest)
 	{
 		while (n--)
 			*d++ = *s++;
