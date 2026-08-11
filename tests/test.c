@@ -24,8 +24,8 @@ int main(){
 	// memset_test("", 'p', 4);
 	// bzero_test("apple", 7);
 	// memcpymove_test("PINEAPPLE", "pineapple", 2);
-	// strlcpy_test("b", "a", 0);
-	// strlcat_test("xyzbar", "abc", 10, 9);
+	// strlcpy_test("blab", "", 4);
+	// strlcat_test("apple", "", 20, 6);
 	// touplower_test();
 	// strchrs_test("elephante", 'e');
 	// memchr_test("applepineapple", 'n', 3);
@@ -70,6 +70,6 @@ int main(){
 	// ft_lstclear(&list, free);
 	// ft_lstclear(&map, free);
 	// for (int i = 0; ayat[i]; i++)
-	// 	free(ayat[i]);
+	// free(ayat[i]);
 	// free(ayat);
 }
