@@ -32,14 +32,14 @@ int main(){
 	// strncmp_test("apple", "apples", 6);
 	// memcmp_test("ling", "l", 2);
 	// strnstr_test("applepineapple", "ple", 20);
-	// atoi_test("");
+	// atoi_test("    +10923");
 	// calloc_test(0, sizeof(int));
 
 	putstr("@@@@@@@@@@@@@@");
 	putstr("@@@ PART 2 @@@");
 	putstr("@@@@@@@@@@@@@@\n");
 
-	// substr_test("animalballs", 6, 4);
+	substr_test("animal\0balls", 7, 4);
 	// strjoin_test(" ", " ");
 	// strtrim_test("abcHelloabcWorldabc ", "abc");
 	// split_test("", 'c');

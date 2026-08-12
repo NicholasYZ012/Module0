@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/01 12:01:10 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/05 10:11:08 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/12 17:10:16 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int	n;
-	int	i;
+	int		n;
+	size_t	i;
 
 	n = ft_strlen(str);
 	i = 0;

@@ -13,17 +13,17 @@ void memset_test(void *s, int c, size_t n){
 	putstr("This test also uses ft_strdup so it can be considered its test");
 	printf("ori: %s\n", (char *)s);
 	printf("### AFTER MEMSET ###\nMine\n");
-	for (int i = 0; i < ft_strlen(s) + 1; i++)
+	for (size_t i = 0; i < ft_strlen(s) + 1; i++)
 		printf("%c ", s1[i]);
 	putstr("");
-	for (int i = 0; i < ft_strlen(s) + 1; i++)
+	for (size_t i = 0; i < ft_strlen(s) + 1; i++)
 		printf("%d ", s1[i]);
 	putstr("");
 	printf("Lib\n");
-	for (int i = 0; i < ft_strlen(s) + 1; i++)
+	for (size_t i = 0; i < ft_strlen(s) + 1; i++)
 		printf("%c ", s2[i]);
 	putstr("");
-	for (int i = 0; i < ft_strlen(s) + 1; i++)
+	for (size_t i = 0; i < ft_strlen(s) + 1; i++)
 		printf("%d ", s2[i]);
 	putstr("\n\n");
 	free(s1);

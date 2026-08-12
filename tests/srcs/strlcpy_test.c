@@ -15,20 +15,20 @@ void strlcpy_test(const char *s1, const char *s2, size_t n){
 	librv = strlcpy(libdst, libsrc, n);
 	printf("### AFTER STRLCPY ###\nMy dest: %s\nMy RV: %d\n", dst, rv);
 	printf("String: ");
-	for (int i = 0; i < ft_strlen(dst) + 1; i++)
+	for (size_t i = 0; i < ft_strlen(dst) + 1; i++)
 		printf("%c ", dst[i]);
 	putstr("");
 	printf("Int: ");
-	for (int i = 0; i < ft_strlen(dst) + 1; i++)
+	for (size_t i = 0; i < ft_strlen(dst) + 1; i++)
 		printf("%d ", dst[i]);
 	putstr("\n");
 	printf("Lib dest: %s\nLib RV: %d\n", libdst, librv);
 	printf("String: ");
-	for (int i = 0; i < ft_strlen(libdst) + 1; i++)
+	for (size_t i = 0; i < ft_strlen(libdst) + 1; i++)
 		printf("%c ", libdst[i]);
 	putstr("");
 	printf("Int: ");
-	for (int i = 0; i < ft_strlen(libdst) + 1; i++)
+	for (size_t i = 0; i < ft_strlen(libdst) + 1; i++)
 		printf("%d ", libdst[i]);
 	putstr("\n\n");
 	free(dst);
