@@ -21,9 +21,6 @@ all: $(NAME) clean
 $(NAME): $(LIB)
 	$(CC) $(CDEBUG) $(CFLAGS) $(TESTSRC) -o $@ $(LDFLAGS)
 
-nodebug: $(LIB) clean
-	$(CC) $(CFLAGS) $(TESTSRC) -o $@ $(LDFLAGS)
-
 $(LIB): $(OBJ)
 	ar rcs $@ $^
 

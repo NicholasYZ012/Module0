@@ -16,7 +16,7 @@ OBJ := $(SRCS:%.c=%.o)
 
 # Compiler var
 CC := cc
-CFLAGS := -Wall -Wextra -Werror -g
+CFLAGS := -Wall -Wextra -Werror
 
 all: $(NAME)
 
@@ -30,7 +30,7 @@ clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 

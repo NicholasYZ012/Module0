@@ -27,7 +27,7 @@ int main(){
 	// strlcpy_test("blab", "", 4);
 	// strlcat_test("apple", "", 20, 6);
 	// touplower_test();
-	// strchrs_test("elephante", 'e');
+	strchrs_test("elephante", '\0');
 	// memchr_test("applepineapple", 'n', 3);
 	// strncmp_test("apple", "apples", 6);
 	// memcmp_test("ling", "l", 2);
@@ -39,13 +39,13 @@ int main(){
 	putstr("@@@ PART 2 @@@");
 	putstr("@@@@@@@@@@@@@@\n");
 
-	substr_test("animal\0balls", 7, 4);
+	// substr_test("animal\0balls", 7, 4);
 	// strjoin_test(" ", " ");
-	// strtrim_test("abcHelloabcWorldabc ", "abc");
+	strtrim_test("abc\0cba ", "abc");
 	// split_test("", 'c');
 	// itoa_test(-109989876);
 	// strmapiteri_test("appleBOY123");
-	// fd_test(NULL, 2);
+	// fd_test("niceadwdwdadwdaadwawawaswdawadwadadwaw", 2);
 
 	putstr("@@@@@@@@@@@@@@");
 	putstr("@@@ PART 3 @@@");

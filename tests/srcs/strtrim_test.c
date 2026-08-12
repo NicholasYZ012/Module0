@@ -13,9 +13,9 @@ void strtrim_test(const char *s1, const char *set)
 	for (int i = 0; set[i]; i++)
 		printf("%d ", set[i]);
 	putstr("");
-	printf("Trimmed: %s\n", trimmed);
+	printf("Trimmed: #%s#\n", trimmed);
 	printf("Trimmed in ascii: ");
-	for (int i = 0; trimmed[i]; i++)
+	for (size_t i = 0; i <= ft_strlen(trimmed); i++)
 		printf("%d ", trimmed[i]);
 	putstr("\n\n");
 	free(trimmed);

@@ -15,7 +15,7 @@ void fd_test(char *s, int fd)
 	ft_putendl_fd(s, fd);
 	printf("!");
 	putstr("\n### FT_PUTNBR_FD ###");
-	ft_putnbr_fd(ft_strlen(s), fd);
+	ft_putnbr_fd(-109876412, fd);
 	printf("!");
 	putstr("\n\n");
 }
