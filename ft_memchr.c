@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/01 15:53:22 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/12 16:22:15 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/16 18:53:16 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (tgt[i] == c)
-			return ((char *)&(tgt[i]));
+			return ((void *)&(tgt[i]));
 		i++;
 	}
 	return (NULL);

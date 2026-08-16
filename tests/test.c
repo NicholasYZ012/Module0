@@ -27,13 +27,16 @@ int main(){
 	// strlcpy_test("blab", "", 4);
 	// strlcat_test("apple", "", 20, 6);
 	// touplower_test();
-	strchrs_test("elephante", '\0');
+	char str[] = "bonjourno";
+	strchrs_test(str + 2, 'b');
 	// memchr_test("applepineapple", 'n', 3);
 	// strncmp_test("apple", "apples", 6);
 	// memcmp_test("ling", "l", 2);
 	// strnstr_test("applepineapple", "ple", 20);
-	// atoi_test("    +10923");
+	// atoi_test("\n\n\n  -46\b9 \n5d6");
 	// calloc_test(0, sizeof(int));
+	// int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
+	// printf("%s", (char *)ft_memchr(tab, -1, 7));
 
 	putstr("@@@@@@@@@@@@@@");
 	putstr("@@@ PART 2 @@@");
@@ -41,11 +44,12 @@ int main(){
 
 	// substr_test("animal\0balls", 7, 4);
 	// strjoin_test(" ", " ");
-	strtrim_test("abc\0cba ", "abc");
-	// split_test("", 'c');
+	// strtrim_test("abc\0cba ", "abc");
+	// split_test("", 'z  ');
 	// itoa_test(-109989876);
 	// strmapiteri_test("appleBOY123");
 	// fd_test("niceadwdwdadwdaadwawawaswdawadwadadwaw", 2);
+	ft_putnbr_fd(-987441, 1);
 
 	putstr("@@@@@@@@@@@@@@");
 	putstr("@@@ PART 3 @@@");
