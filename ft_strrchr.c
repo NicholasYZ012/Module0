@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/01 12:01:10 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/19 10:02:16 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/19 10:32:33 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	int		n;
-	size_t	i;
 
 	n = ft_strlen(str);
-	i = 0;
-	while (i < ft_strlen(str))
+	while (n >= 0)
 	{
 		if (str[n] == (char)c)
 			return ((char *)&(str[n]));
 		n--;
-		i++;
 	}
 	return (NULL);
 }
