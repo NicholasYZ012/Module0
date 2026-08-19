@@ -6,7 +6,7 @@
 /*   By: nilim <nilim@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:27:28 by nilim             #+#    #+#             */
-/*   Updated: 2026/08/07 15:25:09 by nilim            ###   ########.fr       */
+/*   Updated: 2026/08/19 10:04:12 by nilim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ char	**ft_split(const char *s1, char c)
 	char	**arr;
 	int		w;
 
+	if (s1[0] == '\0')
+		return (ft_calloc(1, sizeof(char *)));
 	clean = ft_strtrim(s1, &c);
 	if (clean == NULL)
 		return (NULL);
